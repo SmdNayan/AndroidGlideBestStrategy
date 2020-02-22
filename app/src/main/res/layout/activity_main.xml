@@ -26,7 +26,8 @@
         android:id="@+id/searchView"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        android:queryHint="Search Your Favorite Image"
+        app:layout_constraintEnd_toStartOf="@+id/search_button"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -34,7 +35,7 @@
     </SearchView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/search_button"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_weight="1"

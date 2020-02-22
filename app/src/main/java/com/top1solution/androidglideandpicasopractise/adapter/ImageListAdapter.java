@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.signature.ObjectKey;
 import com.top1solution.androidglideandpicasopractise.R;
 import com.top1solution.androidglideandpicasopractise.model.Hit;
 
@@ -37,6 +39,7 @@ public class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.Imag
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Glide.with(context)
                 .load(imageUrls.get(position).getLargeImageURL())
+                .diskCacheStrategy(DiskCacheStrategy.ALL) // Enable Disk Cache
                 .into(holder.imageView);
     }
 
